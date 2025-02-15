@@ -5,6 +5,7 @@ public class BallController : MonoBehaviour
 {
 
     [SerializeField] private float force = 1f;
+    [SerializeField] private Transform ballAnchor;
 
     private bool isBallLaunched;
     private Rigidbody ballRB;
@@ -13,16 +14,16 @@ public class BallController : MonoBehaviour
     void Start()
     {
         ballRB = GetComponent<Rigidbody>();
-
-        //Add a listener to OnSpacePressed event
-        //when space pressed, LaunchBall called
         inputManager.OnSpacePressed.AddListener(LaunchBall);
+        transform.parent = ballAnchor;
+        transform.localPosition = Vector3.zero;
     }
 
     private void LaunchBall()
     {
         if(isBallLaunched) return;
         isBallLaunched = true;
+        transform.parent = null;
         ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 
