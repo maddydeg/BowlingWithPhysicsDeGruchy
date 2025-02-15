@@ -910,6 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 30
   ballAnchor: {fileID: 1368927227}
+  launchIndicator: {fileID: 588690220}
   inputManager: {fileID: 233449431}
 --- !u!1 &780023534
 GameObject:
