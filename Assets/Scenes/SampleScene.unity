@@ -767,7 +767,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612239803}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f6ce79b470b1a3d42bbe955ed2ec6c1e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1158,8 +1158,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128799074}
-  - component: {fileID: 2128799076}
   - component: {fileID: 2128799075}
+  - component: {fileID: 2128799076}
   - component: {fileID: 2128799077}
   m_Layer: 0
   m_Name: Player
@@ -1218,7 +1218,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128799073}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6a87a4ca71c2054283af61e8cb42147, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
