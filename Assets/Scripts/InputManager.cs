@@ -18,11 +18,11 @@ public class InputManager : MonoBehaviour
         }
 
         Vector2 input = Vector2.zero;
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             input += Vector2.left;
         }
-        if (Input.GetKeyUp(KeyCode.D)) { 
+        if (Input.GetKey(KeyCode.D)) { 
             input += Vector2.right; 
         }
         OnMove?.Invoke(input);
