@@ -5,8 +5,9 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
+    public UnityEvent<Vector2> OnMove = new UnityEvent<Vector2>();
     public UnityEvent OnSpacePressed = new UnityEvent();
-    // Update is called once per frame
+    
     void Update()
     {
        
@@ -14,7 +15,16 @@ public class InputManager : MonoBehaviour
         {
             //listens for space key 
             OnSpacePressed?.Invoke();
-            //Invoke() -> calls all functions subrcibed to this event
         }
+
+        Vector2 input = Vector2.zero;
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            input += Vector2.left;
+        }
+        if (Input.GetKeyUp(KeyCode.D)) { 
+            input += Vector2.right; 
+        }
+        OnMove?.Invoke(input);
     }
 }
