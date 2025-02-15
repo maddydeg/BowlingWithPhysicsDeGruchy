@@ -5,13 +5,13 @@ public class BallController : MonoBehaviour
 {
 
     [SerializeField] private float force = 1f;
+
+    private bool isBallLaunched;
+    private Rigidbody ballRB;
     [SerializeField] private InputManager inputManager;
 
-    private Rigidbody ballRB;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //reference to the RigidBody
         ballRB = GetComponent<Rigidbody>();
 
         //Add a listener to OnSpacePressed event
@@ -21,6 +21,8 @@ public class BallController : MonoBehaviour
 
     private void LaunchBall()
     {
+        if(isBallLaunched) return;
+        isBallLaunched = true;
         ballRB.AddForce(transform.forward * force, ForceMode.Impulse);
     }
 
